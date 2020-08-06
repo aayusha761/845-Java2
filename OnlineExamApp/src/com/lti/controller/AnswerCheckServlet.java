@@ -19,7 +19,7 @@ public class AnswerCheckServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 
-		System.out.println("Hello");
+		System.out.println("Hi");
 		HttpSession session = request.getSession();
 		Question qs = (Question) session.getAttribute("nextQs");
 		
@@ -36,8 +36,6 @@ public class AnswerCheckServlet extends HttpServlet {
 		session.setAttribute("score", score);
 
 		response.sendRedirect("QuestionLoaderServlet");
-		
-		
 
 	}
 
